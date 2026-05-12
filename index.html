@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Rebuilding</title>  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    :root{
+      --bg:#f5f3ef;
+      --card:rgba(255,255,255,0.65);
+      --text:#2d2b2a;
+      --muted:#7c7672;
+      --shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    body{
+      background:linear-gradient(to bottom,#f6f4f0,#ece8e1);
+      color:var(--text);
+      font-family:'Inter',sans-serif;
+      overflow-x:hidden;
+      opacity:0;
+      animation:fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn{to{opacity:1}}
+
+    section{padding:90px 20px;}
+    .container{max-width:900px;margin:auto;}
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(48px,8vw,90px);
+      font-weight:500;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      line-height:1.7;
+      max-width:600px;
+      margin:auto;
+    }
+
+    .btn{
+      margin-top:30px;
+      display:inline-block;
+      padding:12px 26px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.6);
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid rgba(0,0,0,0.08);
+      transition:.3s;
+      cursor:pointer;
+    }
+
+    .btn:hover{transform:translateY(-3px);}
+
+    .card{
+      background:var(--card);
+      padding:35px;
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      margin-bottom:25px;
+    }
+
+    .title{font-family:'Cormorant Garamond',serif;font-size:34px;margin-bottom:10px;}
+    .muted{color:var(--muted);line-height:1.7;}
+
+    /* MEMORY POLAROID STYLE */
+    .grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      justify-content:center;
+    }
+
+    .grid img{
+      width:220px;
+      height:260px;
+      object-fit:cover;
+      border-radius:14px;
+      box-shadow:0 12px 25px rgba(0,0,0,0.12);
+      transform:rotate(var(--r,0deg));
+      transition:.3s;
+      background:white;
+      padding:8px;
+    }
+
+    .grid img:nth-child(odd){--r:-2deg;}
+    .grid img:nth-child(even){--r:2deg;}
+
+    .grid img:hover{
+      transform:scale(1.05) rotate(0deg);
+    }
+
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:28px;margin-top:25px;}
+
+    .quote{margin-top:25px;border-left:2px solid rgba(0,0,0,0.1);padding-left:15px;color:var(--muted);font-style:italic;}
+
+    footer{text-align:center;padding:60px 20px;color:var(--muted);}
+
+    .hidden{display:none;}
+
+    audio{display:none;}
+  </style></head>
+<body><section class="hero">
+  <div>
+    
+    <p>I'm not disappearing, I'm still here.</p>
+    <a class="btn" href="#main" id="enterBtn">Enter</a>
+  </div>
+</section><section id="main">
+<div class="container">  <!-- MEMORY SECTION -->  <div class="card">
+    
+    <p class="muted">Memories that still feel like home to me.</p>
+    <br><div class="grid">
+  <img src="photo1.jpg" alt="memory1">
+  <img src="photo2.jpg" alt="memory2">
+  <img src="photo3.jpg" alt="memory3">
+  <img src="photo4.jpg" alt="memory4">
+</div>
+
+  </div>  <!-- INTRO -->  <div class="card">
+    
+    <p class="muted">A space where I can be honest, without pressure.</p>
+    <button class="btn" onclick="showLetter()">Read</button>
+  </div>  <!-- LETTER -->  <div class="card hidden" id="letter">
+
+
+<p>‎hiii, kamusta ikaw po? <br></br>
+‎‎nakita ko yung sinend mo sa tiktok po. ilang beses ko rin binasa bago ako nag decide na gawin 'to kase hindi ko rin po alam paano sasabihin lahat nang hindi ikaw naguguluhan at nasasaktan po.<br></br>
+‎‎natatakot din ako mag message minsan po kahit gustong gusto kitang i-check kasi ayoko pong masira yung space na bini-build mo po para sa sarili mo. ayoko rin pong ma-feel mong pinipilit kita or dinadagdagan ko yung bigat na nafe-feel mo everyday.<br></br>
+‎‎pero magiging honest din po ako na natatakot din ako na baka habang tahimik tayo, tuluyan nang mawala lahat ng nararamdaman mo para sakin po. hindi dahil madali lang sayo lahat kundi dahil alam kong napagod ko ikaw at nasaktan nang sobra po.<br></br>
+‎‎kaya siguro kahit tahimik ako lately, hindi ibig sabihin non na wala akong ginagawa o nakakalimot na po ako. walang araw na pinili kong kalimutan ka. araw-araw pa rin po kitang iniisip, sa maliliit na bagay, sa routine ko, sa mga oras na sanay akong kausap at kasama ka. pero instead na puro emotion lang ulit mai-show ko sayo, sinusubukan ko pong ayusin yung sarili ko nang paunti-unti. gumagawa lang din po ako ng way para maka-earn and maging mas maayos ako pag nagkita tayo next week at hindi na ko maging yung puro salita lang. gusto ko rin po talagang makita ka at makasama ka ulit kapag kaya ko nang humarap sayo nang mas maayos at mas consistent. don't worry po, no pressure rin po. i'll make sure na wala tayong aayusin or pag uusapan na heavy kapag nagkita tayo. i just want to see you and makasama ka kahit papano. wala rin namang kasiguraduhan ako po kung may nakakausap ka na rin po nyan.<br></br>
+‎‎hindi ko po hinihingi na may sagot ka agad o may i-promise ako ngayon. gusto ko lang maging honest na kahit natatakot ako po, willing pa rin akong mag try at mag risk. hindi dahil umaasa ako na magiging okay po lahat, kundi dahil ikaw pa rin yung taong gusto kong piliin sa kahit anong sitwasyon. na ikaw pa rin yung taong gusto kong makita at makasama po palagi.<br></br>
+‎‎alam kong maguguluhan ka na naman po, ayoko pong masaktan ikaw, baby :(( hindi ko kayang nasasaktan ka nang ganyan po everyday. kahit hindi kita nakikita po, i'm sad po kapag naiisip ko kung paano ka mag overthink. tanggap ko po yung mga pagkukulang ko at walang valid reason po ron, walang kahit anong "sorry" ang makakabura non.<br></br>
+‎‎alam mo po kung anong realization ko sa pagre-reflect ng ilang araw na hindi tayo nag uusap po? na after ng closure na binigay mo po, yes, walking away would be easier po. pero ayoko ng madali kung ang kapalit non ay mawawala ka naman. i'm not here para gawing complicated lahat sayo po ulit, i'm here kase may part sakin na naniniwala pa rin na what we had was real and worth fighting for. i really don't know kung may part pa sayo kahit konti na open pa for me at para kausapin ako pero sana nga po. i mean, no pressure pa rin po, i'm just letting you know na andito ako, no matter what.<br></br>
+‎‎kung pwede mo lang ilagay yung sarili mo po sakin, baby. malalaman mo po kung bat hindi kita mabitawan, kung bat after ng lahat mahal na mahal pa rin kita, na pipiliin kitang mahalin nang paulit ulit kahit anong mangyari. at alam ko rin po na kung pwede ko rin mailagay sarili ko sayo, malalaman ko rin kung gaano ka nasasaktan sa mga pagkukulang ko noon pa man. pero you can't stop me from loving you po. hinding hindi kita susukuang mahalin. hindi ko gustong takasan yung mga pagkukulang ko po. gusto ko pong matutunan gawing maayos this time.<br></br>
+‎‎hindi ko masabing i've already done my part kase hindi ko pa naman talaga nagagawa lahat. nawala rin ako sa sarili ko netong mga nakaraan and nawala ako nang sobra sa focus sa lahat ng bagay at gagawin ko po lahat para makabangon dito. hindi lang para satin po kundi para sa sarili ko rin. i know you're not into like this set up right now pero gusto kong maging consistent sa pagpunta sayo, sa effort, maging stable unti-unti, at mas present this time.<br></br>
+‎‎pero sa kabila ng lahat ng yan po, naiintindihan ko pa rin po yung desisyon mo at rerespetuhin ko yun. hindi ko hinihingi na may sagot ka po o na magbago yung nararamdaman mo. ayoko rin gawing mabigat lahat sayo po. gusto ko lang maging honest sayo, and after this, pipiliin ko rin muna ulit manahimik po para makahinga ikaw nang maayos po. mag iingat ka po palagi, hindi mo kailangang mag reply po omkii? pero andito lang ako kapag need mo me. i love you po.</p>
+
+
+
+<div class="quote">I love you, pretty</div>
+
+  </div></div>
+</section><footer>Take care of yourself.</footer><!-- MUSIC --><audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio><script>
+
+function showLetter(){
+  document.getElementById('letter').classList.remove('hidden');
+}
+
+// play music when entering
+const enterBtn = document.getElementById('enterBtn');
+const music = document.getElementById('bgMusic');
+
+enterBtn.addEventListener('click', () => {
+  music.play().catch(()=>{});
+});
+
+</script></body>
+</html>
